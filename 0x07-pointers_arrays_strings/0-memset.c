@@ -6,14 +6,12 @@
  * @n: bytes filled.
  * Return: the pointer to dest.
  */
+char *_memset(char *s, char b, unsigned int n)
+{
+	unsigned int i;
 
+	for (i = 0; i < n; i++)
+		*(s + i) =  b;
 
-
-char *_memset(void *ptr, int value, unsigned int num) {
-    unsigned char *p = ptr;
-    unsigned int i;
-    for (i = 0; i < num; i++) {
-        *p++ = (unsigned char)value;
-    }
-    return ptr;
+	return (s);
 }
